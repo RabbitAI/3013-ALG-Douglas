@@ -10,4 +10,4 @@
 | Number | Folder | Description |
 | :----: | ------ | ----------- |
 |   02  |  Assignments   |   Commented Griffin's code      |
-|   03  |  Homework   |     Created a Banner Page   |
+|   03  |  Assignments   |   Fixing and renaming the Resize method   |
