@@ -9,4 +9,4 @@
 
 | Number | Folder | Description |
 | :----: | ------ | ----------- |
-|        |        |             |
+|   A02  |  Assignments   |   Commented Griffin's code      |
