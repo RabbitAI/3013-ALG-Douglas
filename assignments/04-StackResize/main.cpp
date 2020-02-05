@@ -351,7 +351,7 @@ int main()
 void openFiles(ifstream& infile, ofstream& outfile)
 {
   infile.open("nums.dat");
-  outfile.open("output.txt")
+  outfile.open("output.txt");
 }
 
 /**
