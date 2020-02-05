@@ -232,7 +232,7 @@ public:
     A = B;                     // reset array pointer
   }
 
-   /**
+  /**
   * Public void: ContainerShrink
   * 
   * Description:
@@ -260,8 +260,8 @@ public:
     A = B;                      //reset array pointer
   }
 
-   /**
-  * Public void: CheckResize
+  /**
+  * Public bool: CheckResize
   * 
   * Description:
   *     Calculates the ratios then calls the appropriate method to resize 
@@ -271,42 +271,110 @@ public:
   *      NULL
   * 
   * Returns:
-  *      NULL
+  *      [bool]: true if there is a change
   */
-  void CheckResize()
+  bool CheckResize()
   {
     if(top == full)
     {
       ContainerGrow();
+      return true;
     }
     else if(top == size/2)
     {
       ContainerShrink();
+      return true;
     }
+    return false;
+  }
+
+  /**
+  * Public int: getSize
+  * 
+  * Description:
+  *     returns the size of the stack
+  * 
+  * Params:
+  *      NULL
+  * 
+  * Returns:
+  *      [int]: returns the size
+  */
+  int getSize()
+  {
+    return size;
   }
 };
+
+void openFiles(ifstream& infile, ofstream& outfile);
+
+int fillStack(ifstream& infile, ArrayStack stack, int changes);
 
 // MAIN DRIVER
 // Simple Array Based Stack Usage:
 int main()
 {
+  ifstream infile;
+  ofstream outfile;
   ArrayStack stack;
-  int r = 0;
+  int changes = 0;
+  
+  openFiles(infile, outfile);
+  outfile << "###############################################################"
+          << "\n\t Assignment 4  - Resizing the Stack\n\t CMPS 3013 \n\t"
+          << "Christian Douglas\n\n";
+  outfile << "\tMax Stack Size: " << stack.getSize() << '\n';
+  changes = fillstack(stack, changes);
+  outfile << "\tEnd Stack Size: "<< stack.getSize() << '\n';
+  outfile << "\tStack Resized: " << changes << "\n\n";
+  outfile << "###############################################################"
+          << '\n';
+  
+  infile.close();
+  outfile.close();
+  return 0;
+}
 
-  for (int i = 0; i < 20; i++)
+void openFiles(ifstream& infile, ofstream& outfile)
+{
+  infile.open("nums.dat");
+  outfile.open("output.txt")
+}
+
+/**
+ * Public : fillStack
+ * 
+ * Description:
+ *       Pushes even numbers onto the stack and pops numbers off the stack
+ *       if an odd number apears.
+ * 
+ * Params:
+ *      [ifstream&]   : infile
+ *      [ArrayStack]  : stack
+ *      [int]         : changes
+ * 
+ * Returns:
+ *      [int] changes : returns an accumlator for number of changes to the
+ *                      stack
+ */
+int fillStack(ifstream& infile, ArrayStack stack, int changes)
+{
+  int num = 0;
+  infile >> num;
+  while(infile >> num)
   {
-    r = rand() % 100;
-    r = i + 1;
-    if (!stack.Push(r))
+    if(num%2 == 0)
     {
-      cout << "Push failed" << endl;
+      stack.Push(num);
     }
+    else
+    {
+      stack.Pop();
+    }
+    if(stack.CheckResize() == true)
+    {
+      changes++;
+    }
+    return changes;
   }
-
-  for (int i = 0; i < 7; i++)
-  {
-    stack.Pop();
-  }
-
-  stack.Print();
 }
