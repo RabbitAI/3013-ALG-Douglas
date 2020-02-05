@@ -314,10 +314,10 @@ int fillStack(ifstream& infile, ArrayStack stack, int changes);
 // Simple Array Based Stack Usage:
 int main()
 {
-  ifstream infile;
-  ofstream outfile;
-  ArrayStack stack;
-  int changes = 0;
+  ifstream infile;            //ifstream object
+  ofstream outfile;           //ofstream object
+  ArrayStack stack;           //ArrayStack object
+  int changes = 0;            //accumlator for changes made to the stack
   
   openFiles(infile, outfile);
   outfile << "###############################################################"
@@ -335,6 +335,19 @@ int main()
   return 0;
 }
 
+/**
+ * Public : openFiles
+ * 
+ * Description:
+ *        Open the input file and the output file
+ * 
+ * Params:
+ *      [ifstream&]   : infile
+ *      [ofstream&]   : outfile
+ * 
+ * Returns:
+ *      [void]
+ */
 void openFiles(ifstream& infile, ofstream& outfile)
 {
   infile.open("nums.dat");
