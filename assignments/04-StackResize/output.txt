@@ -1,0 +1,10 @@
+###############################################################
+ 	Assignment 4  - Resizing the Stack
+ 	CMPS 3013 
+	Christian Douglas
+
+	Max Stack Size: 10
+	End Stack Size: 10
+	Stack Resized: 1
+
+###############################################################
