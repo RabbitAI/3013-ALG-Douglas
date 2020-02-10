@@ -10,4 +10,4 @@
 | Number | Folder | Description |
 | :----: | ------ | ----------- |
 |   02  |  Assignments   |   Commented Griffin's code      |
-|   03  |  Assignments/03-H01   |   Fixing and renaming the Resize method   |
+|   04  |  Assignments/04-StackResize   |   Fixing and renaming the Resize method   |
