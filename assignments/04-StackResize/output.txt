@@ -5,6 +5,6 @@
 
 	Max Stack Size: 10
 	End Stack Size: 5
-	Stack Resized: 27
+	Stack Resized: 27 times
 
 ###############################################################

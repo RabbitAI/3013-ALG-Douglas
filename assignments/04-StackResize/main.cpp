@@ -326,7 +326,7 @@ int main()
 	outfile << "\tMax Stack Size: " << stack.getSize() << '\n';
 	changes = fillStack(infile, stack, changes);
 	outfile << "\tEnd Stack Size: " << stack.getSize() << '\n';
-	outfile << "\tStack Resized: " << changes << "\n\n";
+	outfile << "\tStack Resized: " << changes << " times\n\n";
 	outfile << "###############################################################"
 		<< '\n';
 
