@@ -11,6 +11,8 @@
 | :----: | ------ | ----------- |
 |   02  |  Assignments   |   Commented Griffin's code      |
 |   04  |  Assignments/04-StackResize   |   Fixing and renaming the Resize method   |
+|   05  |  Assignments/05-P02 | Processing Linear Time |
+|   07  |  Assignments/07-H02 | Heapify Debacle |
 |   09  |  Assignments/09-H03 | Banner Comment | 
 |   10  |  Assignments/10-A03 | 11172 |
 |   10  |  Assignments/10-P04 | 495 |
