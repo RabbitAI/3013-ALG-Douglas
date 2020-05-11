@@ -14,9 +14,9 @@
 |   05  |  Assignments/05-P02 | Processing Linear Time |
 |   07  |  Assignments/07-H02 | Heapify Debacle |
 |   09  |  Assignments/09-H03 | Banner Comment | 
-|   10  |  Assignments/10-A03 | 11172 |
-|   10  |  Assignments/10-P04 | 495 |
-|   11  |  Assignments/11-P05 | 484 |
-|   12  |  Assignments/12-P06 | 11597 |
-|   13  |  Assignments/13-P07 | 1112  |
+|   10  |  Assignments/10-A03 | 11172-uVJudge Upload |
+|   10  |  Assignments/10-P04 | 495-Graph Connectivity |
+|   11  |  Assignments/11-P05 | 484-STL Maps |
+|   12  |  Assignments/12-P06 | 11597-Spanning Trees |
+|   13  |  Assignments/13-P07 | 1112-Shortest Path  |
 |   14  |  Assignments/14-P08 | FerryLoading I, II, III |
